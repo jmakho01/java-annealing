@@ -125,6 +125,25 @@ public class ProblemSolvingTest {
   // Come up with more tests to thoroughly test maxLength
   // Use your creativity here!
     
+  @Test
+  void testMaxLength_isEmpty() {
+    // arrange
+    Set<String> input = new HashSet<>();
+    // act
+    int actual = ProblemSolving.maxLength(input);
+    // assert
+    assertEquals(0, actual);
+  }
+
+  @Test
+  void testMaxLength_sameLength() {
+    // arrange
+    Set<String> input = Set.of("b", "a", "c", "d");
+    // act
+    int actual = ProblemSolving.maxLength(input);
+    // assert
+    assertEquals(1, actual);
+  }
   
   // TODO:
   // Come up with ALL tests to thoroughly test minLength
