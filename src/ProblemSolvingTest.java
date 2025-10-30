@@ -131,4 +131,20 @@ public class ProblemSolvingTest {
   // Use your creativity here, and consider looking back at the maxLength
   // tests for inspiration
 
+  @Test 
+  void TestMinLength_Large() {
+    Set<String> input = Set.of("armadillo", "utopia", "yeah", "Stupefied", "All");
+    int actual = ProblemSolving.minLength(input);
+
+    assertEquals(3, actual);
+  }
+
+  @Test 
+  void TestMinLength_Empty() {
+    Set<String> input = new HashSet<>();
+    int actual = ProblemSolving.minLength(input);
+
+    assertEquals(Integer.MAX_VALUE, actual);
+  }
+
 }
