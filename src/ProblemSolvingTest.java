@@ -29,7 +29,7 @@ public class ProblemSolvingTest {
   }
 
   @Test
-  void testAllStartWithA_falseMultiElement() {
+  void testAllStartWithA_falseMulti() {
     // arrange
     Set<String> input = Set.of("armadillo", "utopia", "Arcanine", "Void");
     // act
@@ -39,9 +39,19 @@ public class ProblemSolvingTest {
   }
 
   @Test
-  void testAllStartWithA_falsetotal() {
+  void testAllStartWithA_falseTotal() {
     // arrange
     Set<String> input = new HashSet<>();
+    // act
+    boolean actual = ProblemSolving.allStartWithA(input);
+    // assert
+    assertTrue(actual);
+  }
+
+  @Test
+  void testAllStartWithA_singleElement() {
+    // arrange
+    Set<String> input = Set.of("armadillo");
     // act
     boolean actual = ProblemSolving.allStartWithA(input);
     // assert
