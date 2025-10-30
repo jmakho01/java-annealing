@@ -2,6 +2,7 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertFalse;
 import static org.junit.Assert.assertTrue;
 
+import java.util.HashSet;
 import java.util.Set;
 
 import org.junit.jupiter.api.Test;
@@ -25,6 +26,26 @@ public class ProblemSolvingTest {
     boolean actual = ProblemSolving.allStartWithA(input);
     // assert
     assertFalse(actual);
+  }
+
+  @Test
+  void testAllStartWithA_falseMultiElement() {
+    // arrange
+    Set<String> input = Set.of("armadillo", "utopia", "Arcanine", "Void");
+    // act
+    boolean actual = ProblemSolving.allStartWithA(input);
+    // assert
+    assertFalse(actual);
+  }
+
+  @Test
+  void testAllStartWithA_falsetotal() {
+    // arrange
+    Set<String> input = new HashSet<>();
+    // act
+    boolean actual = ProblemSolving.allStartWithA(input);
+    // assert
+    assertTrue(actual);
   }
 
   // TODO:
